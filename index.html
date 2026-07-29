@@ -4,189 +4,201 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Instagram Login</title>
+<title>Login</title>
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
 
 body{
 
-    height:100vh;
+height:100vh;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
+display:flex;
+justify-content:center;
+align-items:center;
 
-    background:
-    radial-gradient(circle at 100% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-
-}
-
-.container{
-
-    width:350px;
+background:
+radial-gradient(circle at top left,#fff7f3 0%,transparent 35%),
+radial-gradient(circle at bottom right,#f3fff7 0%,transparent 35%),
+linear-gradient(135deg,#fafafa,#edf6ff);
 
 }
 
-.card{
+.phone{
 
-    background:#fff;
+width:390px;
+height:844px;
 
-    border:1px solid #dbdbdb;
+background:transparent;
 
-    padding:45px 40px 30px;
+display:flex;
+flex-direction:column;
 
-    text-align:center;
+padding:35px 25px;
+
+position:relative;
 
 }
 
 .logo{
 
-    font-size:54px;
+margin-top:110px;
+margin-bottom:90px;
 
-    font-family:cursive;
+display:flex;
+justify-content:center;
 
-    color:#262626;
+}
 
-    margin-bottom:35px;
+.logo .circle{
+
+width:90px;
+height:90px;
+
+border-radius:25px;
+
+background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+.logo .circle::before{
+
+content:"";
+
+width:46px;
+height:46px;
+
+border:6px solid white;
+
+border-radius:50%;
+
+}
+
+.form{
+
+display:flex;
+flex-direction:column;
+gap:18px;
 
 }
 
 input{
 
-    width:100%;
+height:60px;
 
-    height:38px;
+border:1px solid #d6d6d6;
 
-    margin-bottom:8px;
+border-radius:18px;
 
-    padding:10px;
+padding:0 22px;
 
-    border:1px solid #dbdbdb;
+font-size:18px;
 
-    background:#fafafa;
+background:white;
 
-    font-size:12px;
-
-    outline:none;
+outline:none;
 
 }
 
 input:focus{
 
-    border-color:#a8a8a8;
+border-color:#0A66FF;
 
 }
 
 button{
 
-    width:100%;
+height:60px;
 
-    height:32px;
+border:none;
 
-    border:none;
+border-radius:30px;
 
-    border-radius:4px;
+font-size:20px;
 
-    background:#4CB5F9;
+font-weight:600;
 
-    color:#fff;
-
-    font-weight:bold;
-
-    margin-top:8px;
-
-    cursor:pointer;
+cursor:pointer;
 
 }
 
-button:hover{
+.login{
 
-    background:#3797ef;
+background:#0A66FF;
 
-}
-
-.separator{
-
-    display:flex;
-
-    align-items:center;
-
-    margin:20px 0;
-
-    color:#8e8e8e;
-
-    font-size:13px;
-
-    font-weight:bold;
+color:white;
 
 }
 
-.separator::before,
-.separator::after{
+.login:hover{
 
-    content:"";
-
-    flex:1;
-
-    height:1px;
-
-    background:#dbdbdb;
-
-}
-
-.separator span{
-
-    padding:0 18px;
+background:#005be5;
 
 }
 
 .forgot{
 
-    display:block;
+margin-top:30px;
 
-    margin-top:18px;
+text-align:center;
 
-    color:#00376b;
+font-size:18px;
 
-    text-decoration:none;
+text-decoration:none;
 
-    font-size:12px;
-
-}
-
-.signup{
-
-    background:#fff;
-
-    border:1px solid #dbdbdb;
-
-    text-align:center;
-
-    margin-top:10px;
-
-    padding:22px;
-
-    font-size:14px;
-
-    color:#262626;
+color:#1c1c1c;
 
 }
 
-.signup a{
+.bottom{
 
-    color:#0095f6;
+margin-top:auto;
 
-    text-decoration:none;
+display:flex;
 
-    font-weight:bold;
+flex-direction:column;
+
+gap:25px;
+
+}
+
+.create{
+
+background:white;
+
+border:2px solid #0A66FF;
+
+color:#0A66FF;
+
+}
+
+.create:hover{
+
+background:#f2f8ff;
+
+}
+
+.meta{
+
+text-align:center;
+
+font-size:34px;
+
+font-weight:300;
+
+color:#555;
+
+letter-spacing:-1px;
 
 }
 
@@ -196,33 +208,25 @@ button:hover{
 
 <body>
 
-<div class="container">
-
-<div class="card">
+<div class="phone">
 
 <div class="logo">
-Instagram
+<div class="circle"></div>
 </div>
+
+<div class="form">
 
 <input
 type="text"
-placeholder="Phone number, username, or email">
+placeholder="Username, email or mobile number">
 
 <input
 type="password"
 placeholder="Password">
 
-<button>
-Log In
+<button class="login">
+Log in
 </button>
-
-<div class="separator">
-<span>OR</span>
-</div>
-
-<a href="#" class="facebook">
-Log in with Facebook
-</a>
 
 <a href="#" class="forgot">
 Forgot password?
@@ -230,10 +234,15 @@ Forgot password?
 
 </div>
 
-<div class="signup">
+<div class="bottom">
 
-Don't have an account?
-<a href="#">Sign up.</a>
+<button class="create">
+Create new account
+</button>
+
+<div class="meta">
+∞ Meta
+</div>
 
 </div>
 
