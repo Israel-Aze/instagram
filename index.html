@@ -1,133 +1,261 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Fonte -->
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
+<title>Login</title>
 
-<div class="login-box">
+<style>
 
-    <h1 class="logo">Instagram</h1>
-
-    <form>
-        <input type="text" placeholder="Telefone, utilizador ou email" required>
-
-        <div class="password-box">
-            <input type="password" placeholder="Palavra-passe" required>
-            <span class="eye">👁</span>
-        </div>
-
-        <a href="#" class="forgot">Esqueceu a palavra-passe?</a>
-
-        <button type="submit">Entrar</button>
-    </form>
-
-    <div class="divider">
-        <span></span>
-        <p>OU</p>
-        <span></span>
-    </div>
-
-    <a href="#" class="facebook">
-        📘 Entrar com Facebook
-    </a>
-
-    <div class="signup">
-        Não tem uma conta?
-        <a href="#">Registar</a>
-    </div>
-
-</div>
-
-</body>
-</html>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
+
 body{
-    min-height:100vh;
+
+    background:#000;
+
+    height:100vh;
+
     display:flex;
     justify-content:center;
     align-items:center;
 
-    /* Fundo colorido */
-    background:linear-gradient(
-        135deg,
-        #405DE6 0%,
-        #5851DB 20%,
-        #833AB4 40%,
-        #C13584 60%,
-        #E1306C 75%,
-        #FD1D1D 90%,
-        #FCAF45 100%
-    );
+    color:white;
+
 }
 
-.login-box{
-    width:380px;
-    background:rgba(255,255,255,.12);
-    backdrop-filter:blur(15px);
-    -webkit-backdrop-filter:blur(15px);
-    border:1px solid rgba(255,255,255,.25);
-    border-radius:18px;
-    padding:45px 35px;
-    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+/* área principal */
+
+.container{
+
+    width:365px;
+    text-align:center;
+
+    margin-top:-80px;
+
 }
+
+
+/* Logo */
 
 .logo{
-    text-align:center;
-    color:#fff;
-    font-size:48px;
-    font-family:'Pacifico',cursive;
-    margin-bottom:35px;
+
+    font-size:52px;
+
+    font-family:cursive;
+
+    font-weight:bold;
+
+    margin-bottom:55px;
+
 }
+
+
+
+/* Inputs */
 
 input{
+
     width:100%;
-    height:48px;
-    border:none;
-    border-radius:8px;
-    padding:0 15px;
-    margin-bottom:15px;
+
+    height:47px;
+
+    background:#121212;
+
+    border:1px solid #3a3a3a;
+
+    border-radius:6px;
+
+    margin-bottom:14px;
+
+    padding-left:13px;
+
+    color:white;
+
     font-size:14px;
-    outline:none;
+
 }
 
-button{
-    width:100%;
-    height:48px;
-    border:none;
-    border-radius:8px;
-    background:#0095F6;
-    color:#fff;
-    font-size:16px;
-    font-weight:600;
-    cursor:pointer;
-    transition:.3s;
+
+input::placeholder{
+
+    color:#999;
+
 }
 
-button:hover{
-    background:#0077d8;
-}
 
-.forgot,
-.facebook,
-.signup,
-.divider{
-    color:#fff;
-}
+/* senha */
 
-a{
-    color:#fff;
+.forgot{
+
+    display:block;
+
+    text-align:right;
+
+    color:#4da3ff;
+
+    font-size:13px;
+
     text-decoration:none;
+
+    margin-top:-5px;
+
 }
+
+
+
+/* Botão */
+
+.login-btn{
+
+    width:100%;
+
+    height:41px;
+
+    margin-top:30px;
+
+    border:none;
+
+    border-radius:6px;
+
+    background:#3797f0;
+
+    color:white;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+
+
+/* Separador */
+
+.separator{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin:35px 0;
+
+    color:#777;
+
+    font-size:12px;
+
+}
+
+
+.line{
+
+    height:1px;
+
+    background:#222;
+
+    flex:1;
+
+}
+
+
+
+/* Facebook */
+
+.facebook{
+
+    color:#4d9fff;
+
+    font-weight:bold;
+
+    font-size:14px;
+
+}
+
+
+
+/* Rodapé */
+
+
+.footer{
+
+    position:fixed;
+
+    bottom:0;
+
+    width:100%;
+
+    height:75px;
+
+    border-top:1px solid #222;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#aaa;
+
+    font-size:13px;
+
+}
+
+
+.footer span{
+
+    color:#4da3ff;
+
+    font-weight:bold;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<div class="logo">
+    Instagram
+</div>
+
+
+
+<input placeholder="Email, usuário ou telefone">
+
+
+<input type="password" placeholder="Senha">
+
+
+
+<a class="forgot">
+    Esqueceu a senha?
+</a>
+
+
+
+<button class="login-btn">
+    Entrar
+</button>
+
+
+
+<div class="separator">
+
+<div class="line"></div>
