@@ -8,7 +8,6 @@
 
 <title>Login</title>
 
-
 <style>
 
 *{
@@ -34,7 +33,6 @@ body{
 }
 
 
-
 /* CONTAINER */
 
 .phone{
@@ -55,7 +53,6 @@ body{
 
 /* LOGO */
 
-
 .logo{
 
     margin-top:100px;
@@ -70,13 +67,13 @@ body{
 
 
 
-.logo .circle{
+/* QUADRADO DA LOGO */
 
+.logo .circle{
 
     width:100px;
 
     height:100px;
-
 
     border-radius:30px;
 
@@ -99,51 +96,42 @@ body{
 
     position:relative;
 
-
-    box-shadow:
-    0 0 30px rgba(214,41,118,.45);
-
-
 }
 
 
 
-.logo .circle::before{
+/* FUNDO PRETO INTERNO */
 
+.logo .circle::before{
 
     content:"";
 
+    width:86px;
 
-    width:50px;
-
-    height:50px;
-
-
-    border:5px solid white;
+    height:86px;
 
 
-    border-radius:16px;
+    background:#000;
+
+
+    border-radius:24px;
 
 
     position:absolute;
 
-
 }
 
 
 
-.logo .circle::after{
+/* CIRCULO CENTRAL COM BORDA MAIS GROSSA */
 
+.logo .circle::after{
 
     content:"";
 
+    width:52px;
 
-    width:12px;
-
-    height:12px;
-
-
-    background:white;
+    height:52px;
 
 
     border-radius:50%;
@@ -152,10 +140,54 @@ body{
     position:absolute;
 
 
-    top:25px;
+    background:
+    linear-gradient(#000,#000) padding-box,
+    linear-gradient(135deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5) border-box;
 
-    right:25px;
 
+    border:7px solid transparent;
+
+}
+
+
+
+
+
+/* BOLINHA MENOR */
+
+.logo .circle span{
+
+    width:11px;
+
+    height:11px;
+
+
+    border-radius:50%;
+
+
+    background:
+    linear-gradient(135deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5);
+
+
+    position:absolute;
+
+
+    top:12px;
+
+    right:18px;
+
+
+    z-index:3;
 
 }
 
@@ -164,7 +196,6 @@ body{
 
 
 /* FORM */
-
 
 .form{
 
@@ -178,21 +209,16 @@ body{
 
 
 
-
-
 input{
-
 
     height:58px;
 
-
     border-radius:14px;
-
 
     border:1px solid #333;
 
 
-    background:#111;
+    background:#121212;
 
 
     color:white;
@@ -206,7 +232,6 @@ input{
 
     outline:none;
 
-
 }
 
 
@@ -219,12 +244,9 @@ input::placeholder{
 
 
 
-
 input:focus{
 
-
     border-color:#555;
-
 
 }
 
@@ -232,29 +254,15 @@ input:focus{
 
 
 
-/* BOTÃO ENTRAR */
-
+/* BOTÃO */
 
 button{
 
-
-    height:58px;
-
-
-    border:none;
-
+    cursor:pointer;
 
     font-size:18px;
 
-
     font-weight:600;
-
-
-    cursor:pointer;
-
-
-    transition:.3s;
-
 
 }
 
@@ -262,8 +270,10 @@ button{
 
 .login{
 
-
     height:52px;
+
+
+    border:none;
 
 
     border-radius:28px;
@@ -277,33 +287,23 @@ button{
 
     margin-top:5px;
 
-
-    box-shadow:
-
-    0 5px 15px rgba(0,149,246,.25);
-
-
 }
 
 
 
 .login:hover{
 
-
     background:#007ed1;
-
-    transform:translateY(-2px);
 
 }
 
 
 
 
-/* ERRO */
 
+/* AVISO */
 
 .erro{
-
 
     display:none;
 
@@ -328,18 +328,15 @@ button{
 
     font-size:14px;
 
-
 }
 
 
 
 
 
-/* ESQUECEU */
-
+/* LINK */
 
 .forgot{
-
 
     margin-top:25px;
 
@@ -355,37 +352,32 @@ button{
 
     font-size:15px;
 
-
 }
 
 
 
 
 
-/* PARTE FINAL */
-
+/* PARTE INFERIOR */
 
 .bottom{
-
 
     margin-top:auto;
 
 
     display:flex;
 
+
     flex-direction:column;
 
-    gap:25px;
 
+    gap:25px;
 
 }
 
 
 
-
-
 .create{
-
 
     height:52px;
 
@@ -401,24 +393,21 @@ button{
 
     color:#0095f6;
 
-
 }
 
 
 
 .create:hover{
 
-
     background:#001a2b;
-
 
 }
 
 
 
 
-.meta{
 
+.meta{
 
     text-align:center;
 
@@ -431,33 +420,27 @@ button{
 
     font-weight:400;
 
-
 }
-
-
-
 
 
 </style>
 
-
 </head>
-
 
 
 <body>
 
 
-
 <div class="phone">
-
 
 
 <div class="logo">
 
+<div class="circle">
 
-<div class="circle"></div>
+<span></span>
 
+</div>
 
 </div>
 
@@ -468,24 +451,15 @@ button{
 <div class="form">
 
 
-
-<input
-
+<input 
 type="text"
-
 placeholder="Usuário, email ou telefone">
 
 
 
-
-
-<input
-
+<input 
 type="password"
-
 placeholder="Senha">
-
-
 
 
 
@@ -497,15 +471,11 @@ Entrar
 
 
 
-
-
 <div class="erro" id="erroSenha">
 
 Senha incorreta. Verifique sua senha e tente novamente.
 
 </div>
-
-
 
 
 
@@ -517,9 +487,7 @@ Esqueceu sua senha?
 
 
 
-
 </div>
-
 
 
 
@@ -529,14 +497,11 @@ Esqueceu sua senha?
 <div class="bottom">
 
 
-
 <button class="create">
 
 Criar nova conta
 
 </button>
-
-
 
 
 
@@ -552,36 +517,25 @@ Criar nova conta
 
 
 
-
-
 </div>
-
-
 
 
 
 
 <script>
 
-
 const botao = document.querySelector(".login");
 
 const erro = document.getElementById("erroSenha");
 
 
-
 botao.addEventListener("click",()=>{
 
-
-erro.style.display="block";
-
+    erro.style.display="block";
 
 });
 
-
-
 </script>
-
 
 
 </body>
