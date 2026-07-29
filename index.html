@@ -47,3 +47,87 @@
 
 </body>
 </html>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    /* Fundo colorido */
+    background:linear-gradient(
+        135deg,
+        #405DE6 0%,
+        #5851DB 20%,
+        #833AB4 40%,
+        #C13584 60%,
+        #E1306C 75%,
+        #FD1D1D 90%,
+        #FCAF45 100%
+    );
+}
+
+.login-box{
+    width:380px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:18px;
+    padding:45px 35px;
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+}
+
+.logo{
+    text-align:center;
+    color:#fff;
+    font-size:48px;
+    font-family:'Pacifico',cursive;
+    margin-bottom:35px;
+}
+
+input{
+    width:100%;
+    height:48px;
+    border:none;
+    border-radius:8px;
+    padding:0 15px;
+    margin-bottom:15px;
+    font-size:14px;
+    outline:none;
+}
+
+button{
+    width:100%;
+    height:48px;
+    border:none;
+    border-radius:8px;
+    background:#0095F6;
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#0077d8;
+}
+
+.forgot,
+.facebook,
+.signup,
+.divider{
+    color:#fff;
+}
+
+a{
+    color:#fff;
+    text-decoration:none;
+}
