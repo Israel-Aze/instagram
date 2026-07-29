@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Login</title>
+<title>Instagram Login</title>
 
 <style>
 
@@ -16,129 +15,103 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 
-
 body{
-
-    background:#000;
 
     height:100vh;
 
     display:flex;
     justify-content:center;
     align-items:center;
+    flex-direction:column;
 
-    color:white;
+    background:
+    radial-gradient(circle at 100% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 
 }
-
-
-/* área principal */
 
 .container{
 
-    width:365px;
-    text-align:center;
-
-    margin-top:-80px;
+    width:350px;
 
 }
 
+.card{
 
-/* Logo */
+    background:#fff;
+
+    border:1px solid #dbdbdb;
+
+    padding:45px 40px 30px;
+
+    text-align:center;
+
+}
 
 .logo{
 
-    font-size:52px;
+    font-size:54px;
 
     font-family:cursive;
 
-    font-weight:bold;
+    color:#262626;
 
-    margin-bottom:55px;
+    margin-bottom:35px;
 
 }
-
-
-
-/* Inputs */
 
 input{
 
     width:100%;
 
-    height:47px;
+    height:38px;
 
-    background:#121212;
+    margin-bottom:8px;
 
-    border:1px solid #3a3a3a;
+    padding:10px;
 
-    border-radius:6px;
+    border:1px solid #dbdbdb;
 
-    margin-bottom:14px;
+    background:#fafafa;
 
-    padding-left:13px;
+    font-size:12px;
 
-    color:white;
-
-    font-size:14px;
+    outline:none;
 
 }
 
+input:focus{
 
-input::placeholder{
-
-    color:#999;
-
-}
-
-
-/* senha */
-
-.forgot{
-
-    display:block;
-
-    text-align:right;
-
-    color:#4da3ff;
-
-    font-size:13px;
-
-    text-decoration:none;
-
-    margin-top:-5px;
+    border-color:#a8a8a8;
 
 }
 
-
-
-/* Botão */
-
-.login-btn{
+button{
 
     width:100%;
 
-    height:41px;
-
-    margin-top:30px;
+    height:32px;
 
     border:none;
 
-    border-radius:6px;
+    border-radius:4px;
 
-    background:#3797f0;
+    background:#4CB5F9;
 
-    color:white;
+    color:#fff;
 
     font-weight:bold;
+
+    margin-top:8px;
 
     cursor:pointer;
 
 }
 
+button:hover{
 
+    background:#3797ef;
 
-/* Separador */
+}
 
 .separator{
 
@@ -146,116 +119,145 @@ input::placeholder{
 
     align-items:center;
 
-    gap:15px;
+    margin:20px 0;
 
-    margin:35px 0;
+    color:#8e8e8e;
 
-    color:#777;
+    font-size:13px;
 
-    font-size:12px;
+    font-weight:bold;
 
 }
 
+.separator::before,
+.separator::after{
 
-.line{
-
-    height:1px;
-
-    background:#222;
+    content:"";
 
     flex:1;
 
+    height:1px;
+
+    background:#dbdbdb;
+
 }
 
+.separator span{
 
+    padding:0 18px;
 
-/* Facebook */
+}
 
 .facebook{
 
-    color:#4d9fff;
+    color:#385185;
 
     font-weight:bold;
 
     font-size:14px;
 
-}
+    text-decoration:none;
 
-
-
-/* Rodapé */
-
-
-.footer{
-
-    position:fixed;
-
-    bottom:0;
-
-    width:100%;
-
-    height:75px;
-
-    border-top:1px solid #222;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    color:#aaa;
-
-    font-size:13px;
+    display:block;
 
 }
 
+.facebook::before{
 
-.footer span{
+    content:"📘 ";
 
-    color:#4da3ff;
+}
+
+.forgot{
+
+    display:block;
+
+    margin-top:18px;
+
+    color:#00376b;
+
+    text-decoration:none;
+
+    font-size:12px;
+
+}
+
+.signup{
+
+    background:#fff;
+
+    border:1px solid #dbdbdb;
+
+    text-align:center;
+
+    margin-top:10px;
+
+    padding:22px;
+
+    font-size:14px;
+
+    color:#262626;
+
+}
+
+.signup a{
+
+    color:#0095f6;
+
+    text-decoration:none;
 
     font-weight:bold;
 
 }
 
-
 </style>
 
 </head>
 
-
 <body>
-
 
 <div class="container">
 
+<div class="card">
 
 <div class="logo">
-    Instagram
+Instagram
 </div>
 
+<input
+type="text"
+placeholder="Phone number, username, or email">
 
+<input
+type="password"
+placeholder="Password">
 
-<input placeholder="Email, usuário ou telefone">
-
-
-<input type="password" placeholder="Senha">
-
-
-
-<a class="forgot">
-    Esqueceu a senha?
-</a>
-
-
-
-<button class="login-btn">
-    Entrar
+<button>
+Log In
 </button>
 
-
-
 <div class="separator">
+<span>OR</span>
+</div>
 
-<div class="line"></div>
+<a href="#" class="facebook">
+Log in with Facebook
+</a>
+
+<a href="#" class="forgot">
+Forgot password?
+</a>
+
+</div>
+
+<div class="signup">
+
+Don't have an account?
+<a href="#">Sign up.</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
